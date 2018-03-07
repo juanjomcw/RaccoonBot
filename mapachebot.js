@@ -59,7 +59,7 @@ client.on("message", (message) => {
                         '-> '+prefix+'leave <@user> | Sale del canal del voz.\n'+
                         '**RacconBot - Bot Oficial del servidor**\n');
   }else
-   if (message.content.startsWith("ban")){
+   if (message.content.startsWith(prefix + "ban")){
     message.channel.send("<:alm:336584266307731459><:ban:420862051175366656><:ned:420862051410509844>");
 
     }else 
