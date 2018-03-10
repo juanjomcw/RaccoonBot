@@ -48,17 +48,18 @@ client.on("message", (message) => {
   if(message.content.startsWith(prefix + "help")){
       
     message.channel.send('**'+message.author.username+'**, Revisa tus mensajes privados.');
-    message.author.send('**Comandos de RaccoonBot**\n'+
+    message.author.send('**Comandos**\n'+
                         '-> '+prefix+'avatar <@user> | Muestra el avatar de un usuario.\n'+
                         '-> '+prefix+'rabbit | Muestra nuestro grupo de Rabbit.\n'+
-                        '-> '+prefix+'subs <@user> | Muestra informacion para subs.\n'+
-                        '-> '+prefix+'8ball <@user> | El bot respondera a tus preguntas.\n'+
+                        '-> '+prefix+'subs | Muestra informacion para subs.\n'+
+                        '-> '+prefix+'8ball <pregunta> | El bot respondera a tus preguntas.\n'+
                         '-> '+prefix+'user <@user> | Muestra informacion de un usuario.\n'+
-                        '-> '+prefix+'server <@user> | Muestra informacion del.\n'+
-                        '-> '+prefix+'join <@user> | Conecta a un canal de voz.\n'+
-                        '-> '+prefix+'leave <@user> | Sale del canal del voz.\n'+
-                        '-> '+prefix+'event <@user> | Evento actual y/o Proximo en Rabbit.\n'+
-                        '**RacconBot - Bot Oficial del servidor**\n');
+                        '-> '+prefix+'server | Muestra informacion del.\n'+
+                        '-> '+prefix+'join | Conecta a un canal de voz.\n'+
+                        '-> '+prefix+'leave | Sale del canal del voz.\n'+
+                        '-> '+prefix+'event | Evento actual y/o Proximo en Rabbit.\n'+
+                        
+                        '_RacconBot - Bot Oficial del servidor_\n');
   }else
    if (message.content.startsWith(prefix + "ban")){
     message.channel.send("<:alm:336584266307731459><:ban:420862051175366656><:ned:420862051410509844>");
