@@ -57,6 +57,7 @@ client.on("message", (message) => {
                         '-> '+prefix+'server <@user> | Muestra informacion del.\n'+
                         '-> '+prefix+'join <@user> | Conecta a un canal de voz.\n'+
                         '-> '+prefix+'leave <@user> | Sale del canal del voz.\n'+
+                        '-> '+prefix+'event <@user> | Evento actual y/o Proximo en Rabbit.\n'+
                         '**RacconBot - Bot Oficial del servidor**\n');
   }else
    if (message.content.startsWith(prefix + "ban")){
@@ -138,6 +139,11 @@ client.on("message", (message) => {
             Canalvoz.leave();
         }).catch(error => message.channel.send(error));
         }
-    }
+    }else
+  if (message.content.startsWith(prefix + "event")){
+    message.channel.send({embed: {
+        color: 16744448,   
+        description: "Este es nuestro Evento actual y/o Proximo para ver en Rabbit https://www.rabb.it/events/movie-night-nqmp <:wae:404790335609241600>"
+        }});
 });    
 client.login(process.env.TOKEN);
