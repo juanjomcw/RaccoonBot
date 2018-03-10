@@ -59,7 +59,7 @@ client.on("message", (message) => {
                         '-> '+prefix+'leave | Sale del canal del voz.\n'+
                         '-> '+prefix+'event | Evento actual y/o Proximo en Rabbit.\n'+
                         
-                        '_RacconBot - Bot Oficial del servidor_\n');
+                        '_**RacconBot - Bot Oficial del servidor**_\n');
   }else
    if (message.content.startsWith(prefix + "ban")){
     message.channel.send("<:alm:336584266307731459><:ban:420862051175366656><:ned:420862051410509844>");
