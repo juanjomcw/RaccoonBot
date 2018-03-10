@@ -145,5 +145,6 @@ client.on("message", (message) => {
         color: 16744448,   
         description: "Este es nuestro Evento actual y/o Proximo para ver en Rabbit https://www.rabb.it/events/movie-night-nqmp <:wae:404790335609241600>"
         }});
+     }
 });    
 client.login(process.env.TOKEN);
