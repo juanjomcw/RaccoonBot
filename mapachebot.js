@@ -14,12 +14,12 @@ client.on("message", (message) => {
  if (message.author.bot) return;
 
   if (message.content.startsWith(prefix + "subs")) {
-    message.channel.send("Mira el canal de #read_me_first para vincular la cuenta y disfrutar de tus beneficios");
+    message.channel.send('Mira el canal de #read_me_first para vincular la cuenta y disfrutar de tus beneficios <arroba'+415978105883066369+'>');
   } else
   if (message.content.startsWith(prefix + "rabbit")){
     message.channel.send({embed: {
         color: 16744448,   
-        description: "Unete a nuestro grupo de Rabbit para ver peliculas con los mapachitos, recuerda primero crear una cuenta en caso de no tener una https://www.rabb.it/groups/raccoon-army-wzhe <:wae:404790335609241600>"
+        description: "Unete a nuestro grupo de Rabbit para ver peliculas con los mapachitos, recuerda primero crear una cuenta en caso de no tener una *LINK* <:wae:404790335609241600>"
         }});
   } else
   if(message.content.startsWith(prefix + 'avatar')){
@@ -57,7 +57,6 @@ client.on("message", (message) => {
                         '-> '+prefix+'server | Muestra informacion del.\n'+
                         '-> '+prefix+'join | Conecta a un canal de voz.\n'+
                         '-> '+prefix+'leave | Sale del canal del voz.\n'+
-                        '-> '+prefix+'event | Evento actual y/o Proximo en Rabbit.\n'+
                         
                         '_**RacconBot - Bot Oficial del servidor**_\n');
   }else
@@ -140,12 +139,6 @@ client.on("message", (message) => {
             Canalvoz.leave();
         }).catch(error => message.channel.send(error));
         }
-    }else
-  if (message.content.startsWith(prefix + "event")){
-    message.channel.send({embed: {
-        color: 16744448,   
-        description: "Este es nuestro Evento actual y/o Proximo para ver en Rabbit https://www.rabb.it/events/movie-night-nqmp <:wae:404790335609241600>"
-        }});
-     }
+    }
 });    
 client.login(process.env.TOKEN);
