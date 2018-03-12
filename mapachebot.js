@@ -14,7 +14,7 @@ client.on("message", (message) => {
  if (message.author.bot) return;
 
   if (message.content.startsWith(prefix + "subs")) {
-    message.channel.send('Mira el canal de #read_me_first para vincular la cuenta y disfrutar de tus beneficios <arroba'+415978105883066369+'>');
+    message.channel.send('Mira el canal de <#415978105883066369>');
   } else
   if (message.content.startsWith(prefix + "rabbit")){
     message.channel.send({embed: {
