@@ -151,7 +151,7 @@ client.on("message", (message) => {
 
                maxResults: 1,
 
-               key: 'consiguela de youtube-api'
+               key: 'AIzaSyD0V9wSSRdv5FC4W0mLvKOuBIYkUov-2gA'
 
            },(err, res) => {
 
