@@ -139,6 +139,58 @@ client.on("message", (message) => {
             Canalvoz.leave();
         }).catch(error => message.channel.send(error));
         }
-    }
+    }else
+       if (message.content.startsWith(prefix + 'play')) {
+
+  console.log(message.author.username + ' Ha usado p?play en ' + message.channel.name + ' servidor ' + message.guild.name);
+
+  const ytdl = require('ytdl-core');  
+  const search = require('youtube-search');
+
+   search(args, {
+
+               maxResults: 1,
+
+               key: 'consiguela de youtube-api'
+
+           },(err, res) => {
+
+          //Si hay error o no se encontraron resultado de la busqueda
+
+          if (err) return message.channel.send("Error");
+
+          if (!res[0]) return message.channel.send("Sin resultados.");
+
+          
+
+          //Obtiene el link de la busqueda
+
+          let url  = res[0].link;
+
+          
+
+
+
+          let voiceChannel = message.member.voiceChannel;
+
+          voiceChannel.leave();
+
+          voiceChannel.join()
+
+            .then(connection => {
+
+              const url = ytdl(res[0].link, { filter : 'audioonly' });
+
+              const dispatcher = connection.playStream(url);
+
+            });
+
+
+
+      message.channel.send('Reproduciendo ahora: '+ url);
+
+      message.delete();
+
+          })
 });    
 client.login(process.env.TOKEN);
