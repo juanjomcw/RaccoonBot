@@ -54,7 +54,7 @@ client.on("message", (message) => {
                         '-> '+prefix+'subs | Muestra informacion para subs.\n'+
                         '-> '+prefix+'8ball <pregunta> | El bot respondera a tus preguntas.\n'+
                         '-> '+prefix+'user <@user> | Muestra informacion de un usuario.\n'+
-                        '-> '+prefix+'server | Muestra informacion del.\n'+
+                        '-> '+prefix+'server | Muestra informacion del Servidor.\n'+
                         '-> '+prefix+'join | Conecta a un canal de voz.\n'+
                         '-> '+prefix+'leave | Sale del canal del voz.\n'+
                         
