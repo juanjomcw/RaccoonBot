@@ -147,7 +147,7 @@ client.on("message", (message) => {
   const ytdl = require('ytdl-core');  
   const search = require('youtube-search');
 
-   search(args, {
+   search(arguments, {
 
                maxResults: 1,
 
