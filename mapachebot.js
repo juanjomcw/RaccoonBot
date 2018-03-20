@@ -63,7 +63,13 @@ client.on("message", (message) => {
    if (message.content.startsWith(prefix + "ban")){
     message.channel.send("<:alm:336584266307731459><:ban:420862051175366656><:ned:420862051410509844>");
 
-    }else 
+    }else
+  if (message.content.startsWith(prefix + "saosin")){
+    message.channel.send({embed: {
+        color: 10371071,   
+        description: "ahhh prro trais el ocnitrix https://cdn.discordapp.com/attachments/260272124311109652/425551272658206720/75f47707dcfc5806a662eb39ebd2bffa.png"
+        }});
+  }else 
     if(message.content.startsWith(prefix + 'user')){
         let userm = message.mentions.users.first()
         if(!userm){
