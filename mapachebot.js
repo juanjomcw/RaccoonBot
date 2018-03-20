@@ -138,64 +138,12 @@ client.on("message", (message) => {
     if (!Canalvoz) {
         message.channel.send('No estoy en un canal de voz.');
 
-    } else {
-        message.channel.send('Dejando el canal de voz.').then(() => {
-            Canalvoz.leave();
-        }).catch(error => message.channel.send(error));
-        }
-    }else
-       if (message.content.startsWith(prefix + 'play')) {
+    }else 
+       client.on("guildMemberAdd", (member) => {
+   console.log(`Nuevo usuario:  ${member.user.username} se ha unido a ${member.guild.name}.`);
+   var canal = client.channels.get('404155431917715456'); 
+   canal.send(`${member.user}, Bienvenido al servidor pasala bien, ahora eres un mapachito <:hype:331406040434212865> .`);
+       });
 
-  console.log(message.author.username + ' Ha usado p?play en ' + message.channel.name + ' servidor ' + message.guild.name);
-
-  const ytdl = require('ytdl-core');  
-  const search = require('youtube-search');
-
-   search(arguments, {
-
-               maxResults: 1,
-
-               key: 'AIzaSyD0V9wSSRdv5FC4W0mLvKOuBIYkUov-2gA'
-
-           },(err, res) => {
-
-          //Si hay error o no se encontraron resultado de la busqueda
-
-          if (err) return message.channel.send("Error");
-
-          if (!res[0]) return message.channel.send("Sin resultados.");
-
-          
-
-          //Obtiene el link de la busqueda
-
-          let url  = res[0].link;
-
-          
-
-
-
-          let voiceChannel = message.member.voiceChannel;
-
-          voiceChannel.leave();
-
-          voiceChannel.join()
-
-            .then(connection => {
-
-              const url = ytdl(res[0].link, { filter : 'audioonly' });
-
-              const dispatcher = connection.playStream(url);
-
-            });
-
-
-
-      message.channel.send('Reproduciendo ahora: '+ url);
-
-      message.delete();
-
-          })
-    }
 });    
 client.login(process.env.TOKEN);
