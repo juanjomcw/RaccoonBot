@@ -60,7 +60,7 @@ client.on("message", (message) => {
                        '**RacconBot - Bot Oficial del servidor**\n');
  }else
  if (message.content.startsWith(prefix + "ban")){
-   message.channel.send("<:alm:336584266307731459><ban:420862051175366656><ned:420862051410509844>");
+   message.channel.send("<:alm:336584266307731459><:ban:420862051175366656><:ned:420862051410509844>");
 
    }else 
    if(message.content.startsWith(prefix + 'user')){
