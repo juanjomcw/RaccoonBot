@@ -57,8 +57,8 @@ client.on("message", (message) => {
                        '-> '+prefix+'server <@user> | Muestra informacion del.\n'+
                        '-> '+prefix+'join <@user> | Conecta a un canal de voz.\n'+
                        '-> '+prefix+'leave <@user> | Sale del canal del voz.\n'+
-                       'Cualquier problema o duda con los comandos manda DM a Juanjomcw o etiquetarlo en el canal #general.\n'+
-                       '**RacconBot - Bot Oficial del servidor**\n');
+                       '**RacconBot - Bot Oficial del servidor**\n'+
+                      '**Cualquier problema o duda con los comandos manda DM a Juanjomcw o etiquetarlo en el canal #general.**\n'+);
  }else
  if (message.content.startsWith(prefix + "ban")){
    message.channel.send("<:alm:336584266307731459><:ban:420862051175366656><:ned:420862051410509844>");
@@ -115,7 +115,7 @@ client.on("message", (message) => {
        
     }else
     if (message.content.startsWith(prefix + "juanjo")){
-      message.channel.send("JUANJO PATRÓN, AMO Y SEÑOR DE TODOS <:bow:6ad7533814016970e37691af940737b1> ");
+      message.channel.send("JUANJO PATRÓN, AMO Y SEÑOR DE TODOS :bow: ");
        
     }else 
    if(message.content.startsWith(prefix + '8ball')){
