@@ -19,7 +19,7 @@ client.on("message", (message) => {
  if (message.content.startsWith(prefix + "rabbit")){
    message.channel.send({embed: {
        color: 16744448,   
-       description: "Unete a nuestro grupo de Rabbit para ver peliculas con los mapachitos, recuerda primero crear una cuenta en caso de no tener una https://www.rabb.it/groups/raccoon-army-wzhe <:wae:404790335609241600>"
+       description: "Unete a nuestro grupo de Rabbit para ver peliculas con los mapachitos, recuerda primero crear una cuenta en caso de no tener una https://www.rabb.it/groups/raccoonarmy <:wae:404790335609241600>"
        }});
  } else
  if(message.content.startsWith(prefix + 'avatar')){
@@ -107,6 +107,14 @@ client.on("message", (message) => {
     }else
     if (message.content.startsWith(prefix + "saosin")){
       message.channel.send("AAAAHHHHH PRRO TRAIS EL OCNTRIS https://cdn.discordapp.com/attachments/260272124311109652/425551272658206720/75f47707dcfc5806a662eb39ebd2bffa.png");
+       
+    }else
+    if (message.content.startsWith(prefix + "karla")){
+      message.channel.send("La mejor de todas <:love:331544353115734016>");
+       
+    }else
+    if (message.content.startsWith(prefix + "juanjo")){
+      message.channel.send("JUANJO PATRÓN, AMO Y SEÑOR DE TODOS <:bow:6ad7533814016970e37691af940737b1> ");
        
     }else 
    if(message.content.startsWith(prefix + '8ball')){
