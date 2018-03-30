@@ -57,6 +57,9 @@ client.on("message", (message) => {
                        '-> '+prefix+'server <@user> | Muestra informacion del.\n'+
                        '-> '+prefix+'join <@user> | Conecta a un canal de voz.\n'+
                        '-> '+prefix+'leave <@user> | Sale del canal del voz.\n'+
+                       '-> '+prefix+'saosin.\n'+
+                        '-> '+prefix+'karla.\n'+
+                        '-> '+prefix+'juanjo.\n'+
                        '**RacconBot - Bot Oficial del servidor**\n'+
                       '**Cualquier problema o duda con los comandos manda DM a Juanjomcw o etiquetarlo en el canal #general.**\n');
  }else
