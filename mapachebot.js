@@ -55,11 +55,11 @@ client.on("message", (message) => {
                        '-> '+prefix+'8ball <@user> | El bot respondera a tus preguntas.\n'+
                        '-> '+prefix+'user <@user> | Muestra informacion de un usuario.\n'+
                        '-> '+prefix+'server <@user> | Muestra informacion del.\n'+
-                       '-> '+prefix+'join <@user> | Conecta a un canal de voz.\n'+
-                       '-> '+prefix+'leave <@user> | Sale del canal del voz.\n'+
+                       '-> '+prefix+'join <@user> | Conecta a un canal de voz (no disponible por el momento).\n'+
+                       '-> '+prefix+'leave <@user> | Sale del canal del voz (no disponible por el momento) .\n'+
                        '-> '+prefix+'saosin.\n'+
-                        '-> '+prefix+'karla.\n'+
-                        '-> '+prefix+'juanjo.\n'+
+                       '-> '+prefix+'karla.\n'+
+                       '-> '+prefix+'juanjo.\n'+
                        '**RacconBot - Bot Oficial del servidor**\n'+
                       '**Cualquier problema o duda con los comandos manda DM a Juanjomcw o etiquetarlo en el canal #general.**\n');
  }else
@@ -79,7 +79,6 @@ client.on("message", (message) => {
            .addField('ID', user.id, true)
            .addField('Estado', user.presence.status, true)
            .addField('Apodo', message.member.nickname, true)
-           .addField('Fecha de Ingreso', message.member.joinedAt.toDateString())
            .addField('Roles', message.member.roles.map(roles => `\`${roles.name}\``).join(', '))
            .setColor(10371071)
            
@@ -91,7 +90,6 @@ client.on("message", (message) => {
          .addField('Jugando a', userm.presence.game != null ? userm.presence.game.name : "Nada", true)
          .addField('ID', userm.id, true)
          .addField('Estado', userm.presence.status, true)
-         .addField('Fecha de Ingreso', message.member.joinedAt.toDateString())
          .setColor(10371071)
          
         message.channel.send({ embed });
