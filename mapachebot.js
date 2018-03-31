@@ -68,7 +68,7 @@ client.on("message", (message) => {
 
    }else 
    if(message.content.startsWith(prefix + 'user')){
-       llet userm = message.mentions.users.first()
+       let userm = message.mentions.users.first()
 
 if(!userm){
   var user = message.author;
