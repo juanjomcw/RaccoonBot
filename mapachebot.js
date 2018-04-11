@@ -135,7 +135,7 @@ client.on("message", (message) => {
      const random = Math.floor(Math.random() * 100);
      let heard = "";
  
-    if(random < 30){
+    if(random < 50){
         heard=':broken_heart:';
 
     }else if(random < 80){
