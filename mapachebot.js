@@ -126,7 +126,7 @@ client.on("message", (message) => {
        
     }else
     if (message.content.startsWith(prefix + "karla")){
-      message.channel.send("La mejor de todas <:love:331544353115734016>");
+      message.channel.send("La mejor de todas <:karlagLove:433626197168226355>");
        
     }else
     if (message.content.startsWith(prefix + "juanjo")){
