@@ -5,7 +5,7 @@ client.on("ready", () => {
    console.log("Estoy listo!");
    
    client.user.setPresence( {
-       status: "Online",
+       status: "STREAMING",
        game: {
            name: "!help | Raccoon★Army ▹",
            url: "https://www.twitch.tv/Karla_Green",
@@ -21,7 +21,7 @@ client.on("message", (message) => {
     if (message.author.bot) return;
 
  if (message.content.startsWith(prefix + "subs")) {
-   message.channel.send("Mira el canal de #read_me_first para vincular la cuenta y disfrutar de tus beneficios");
+   message.channel.send("Mira el canal de <#415978105883066369> para vincular la cuenta y disfrutar de tus beneficios");
  } else
  if (message.content.startsWith(prefix + "rabbit")){
    message.channel.send({embed: {
@@ -64,6 +64,7 @@ client.on("message", (message) => {
                        '-> '+prefix+'server <@user> | Muestra informacion del.\n'+
                        '-> '+prefix+'join <@user> | Conecta a un canal de voz (no disponible por el momento).\n'+
                        '-> '+prefix+'leave <@user> | Sale del canal del voz (no disponible por el momento) .\n'+
+                       '-> '+prefix+'love <@user> | Muestra el amor que tienes entre dos personas .\n'+
                        '-> '+prefix+'saosin.\n'+
                        '-> '+prefix+'karla.\n'+
                        '-> '+prefix+'juanjo.\n'+
@@ -159,6 +160,18 @@ client.on("message", (message) => {
           .setColor(0xff4d4d)
 
         message.channel.send({embed});
+       
+       client.on("guildMemberAdd", (member) => 
+ {
+     messageToSend = "Bienvenido " + member.user + " a la Raccoon★Army ▹!  disfruta tu estancia en la comunidad <:karly:331439541892284417> revisa nuestras reglas en <#262072325019664385> <:RaccAttack:268179348828323841> !";
+     client.channels.get('404155431917715456').sendMessage(messageToSend);
+ });
+ 
+ client.on("guildMemberRemove", (member) => 
+ {
+     messageToSend = member.user.username + " abusó de la arena de gatos. Adios popó <:feelsyoshiman:336584928160514051>.";
+     client.channels.get('404155431917715456').sendMessage(messageToSend);
+ });
        //de aqui para arriba
     }else 
    if (message.content. startsWith(prefix + 'join')){
