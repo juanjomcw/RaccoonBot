@@ -3,8 +3,14 @@ const  client = new Discord.Client();
 
 client.on("ready", () => {
     console.log("Estoy listo!");
-    client.user.setGame(prefix+'help | Raccoon★Army ▹');
- 
+    client.user.setPresence( {
+       status: "online",
+       game: {
+           name: "!help | Raccoon★Army ",
+           url: "https://www.twitch.tv/karla_green",
+           type: "STREAMING"
+       }
+   } );
  });
 
  client.on("guildMemberAdd", (member) => 
@@ -75,8 +81,9 @@ client.on("message", (message) => {
                        '**RacconBot - Bot Oficial del servidor**\n'+
                       '**Cualquier problema o duda con los comandos manda DM a Juanjomcw o etiquetarlo en el canal #general.**\n');
  }else
- if (message.content.startsWith(prefix + "ban")){
-   message.channel.send("<:alm:336584266307731459> <:ban:420862051175366656> <:ned:420862051410509844>");
+     client.on("message", (message) => {
+ if (message.content.startsWith("ban")){
+   message.channel.send("<:alm:336584266307731459> <:ban:369005376361725952>");
 
    }else 
    if(message.content.startsWith(prefix + 'user')){
