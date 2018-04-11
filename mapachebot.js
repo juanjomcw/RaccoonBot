@@ -1,8 +1,11 @@
 const Discord = require("discord.js");
 const  client = new Discord.Client();
-
+//ready y welcome
 client.on("ready", () => {
     console.log("Estoy listo!");
+    
+ 
+ });
 
  client.on("guildMemberAdd", (member) => 
  {
@@ -12,10 +15,11 @@ client.on("ready", () => {
  
  client.on("guildMemberRemove", (member) => 
  {
-     messageToSend = member.user.username + " abusó de la arena de gatos. Adios popó <:feelsyoshiman:336584928160514051>";
+     messageToSend = member.user.username + " abusó de la arena de gatos. Adios popó <:feelsyoshiman:336584928160514051>.";
      client.channels.get('404155431917715456').sendMessage(messageToSend);
  });
- 
+
+ //aqui son comandos
 let prefix = process.env.PREFIX;
 
 client.on("message", (message) => {
@@ -193,4 +197,5 @@ client.on("message", (message) => {
         canal.send((`${member.user}, bienvenido al servidor pasala bien ahora eres un mapachito <:hype:331406040434212865>.`));
     })
 }); 
+client.user.setGame(prefix+'help | Raccoon★Army ▹');
 client.login(process.env.TOKEN);
