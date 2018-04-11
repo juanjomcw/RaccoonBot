@@ -3,7 +3,7 @@ const  client = new Discord.Client();
 
 client.on("ready", () => {
     console.log("Estoy listo!");
-    
+    client.user.setGame(prefix+'help | Raccoon★Army ▹');
  
  });
 
@@ -15,7 +15,7 @@ client.on("ready", () => {
  
  client.on("guildMemberRemove", (member) => 
  {
-     messageToSend = member.user.username + " abusó de la arena de gatos. Adios popó <:feelsyoshiman:336584928160514051>.";
+     messageToSend = member.user.username + " abusó de la arena de gatos. Adios popó <:feelsyoshiman:336584928160514051>";
      client.channels.get('404155431917715456').sendMessage(messageToSend);
  });
  
