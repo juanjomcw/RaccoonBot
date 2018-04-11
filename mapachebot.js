@@ -24,8 +24,7 @@ client.on("ready", () => {
      messageToSend = member.user.username + " abusó de la arena de gatos. Adios popó <:feelsyoshiman:336584928160514051>.";
      client.channels.get('404155431917715456').sendMessage(messageToSend);
  });
-    
-});
+ 
 let prefix = process.env.PREFIX;
 
 client.on("message", (message) => {
