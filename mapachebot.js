@@ -4,7 +4,14 @@ const  client = new Discord.Client();
 client.on("ready", () => {
    console.log("Estoy listo!");
    
-   client.user.setGame(prefix+'help | Raccoon★Army ▹');
+   client.user.setPresence( {
+       status: "Online",
+       game: {
+           name: "!help | Raccoon★Army ▹",
+           url: "https://www.twitch.tv/Karla_Green"
+           type: "STREAMING"
+       }
+   } );
 
 });
 let prefix = process.env.PREFIX;
