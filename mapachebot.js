@@ -10,13 +10,13 @@ client.on("ready", () => {
  client.on("guildMemberAdd", (member) => 
  {
      messageToSend = "Bienvenido " + member.user + " a la Raccoon★Army ▹!  disfruta tu estancia en la comunidad <:karly:331439541892284417> revisa nuestras reglas en <#262072325019664385> <:RaccAttack:268179348828323841> !";
-     client.channels.get('404155431917715456').sendMessage(messageToSend);
+     client.channels.get('433510888188805132').sendMessage(messageToSend);
  });
  
  client.on("guildMemberRemove", (member) => 
  {
      messageToSend = member.user.username + " abusó de la arena de gatos. Adios popó <:feelsyoshiman:336584928160514051>.";
-     client.channels.get('404155431917715456').sendMessage(messageToSend);
+     client.channels.get('433510888188805132').sendMessage(messageToSend);
  });
 let prefix = process.env.PREFIX;
 
