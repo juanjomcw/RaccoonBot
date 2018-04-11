@@ -8,7 +8,7 @@ client.on("ready", () => {
        status: "Online",
        game: {
            name: "!help | Raccoon★Army ▹",
-           url: "https://www.twitch.tv/Karla_Green"
+           url: "https://www.twitch.tv/Karla_Green",
            type: "STREAMING"
        }
    } );
