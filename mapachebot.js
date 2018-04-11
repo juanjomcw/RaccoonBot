@@ -24,7 +24,17 @@ client.on("ready", () => {
      messageToSend = member.user.username + " abusó de la arena de gatos. Adios popó <:feelsyoshiman:336584928160514051>.";
      client.channels.get('433510888188805132').sendMessage(messageToSend);
  });
-let prefix = process.env.PREFIX;
+//comandos sin prefix
+
+     client.on("message", (message) => {
+ if (message.content.startsWith("ban")){
+   message.channel.send("<:alm:336584266307731459> <:ban:369005376361725952>");
+    }
+ });
+
+ //comandos con prefix
+
+ let prefix = process.env.PREFIX;
 
 client.on("message", (message) => {
     if (!message.content.startsWith(prefix)) return;
@@ -69,23 +79,16 @@ client.on("message", (message) => {
                        '-> '+prefix+'avatar <@user> | Muestra el avatar de un usuario.\n'+
                        '-> '+prefix+'rabbit | Muestra nuestro grupo de Rabbit.\n'+
                        '-> '+prefix+'subs <@user> | Muestra informacion para subs.\n'+
-                       '-> '+prefix+'8ball <@user> | El bot respondera a tus preguntas.\n'+
+                       '-> '+prefix+'caracola <@user> | El bot respondera a tus preguntas.\n'+
                        '-> '+prefix+'user <@user> | Muestra informacion de un usuario.\n'+
                        '-> '+prefix+'server <@user> | Muestra informacion del.\n'+
-                       '-> '+prefix+'join <@user> | Conecta a un canal de voz (no disponible por el momento).\n'+
-                       '-> '+prefix+'leave <@user> | Sale del canal del voz (no disponible por el momento) .\n'+
                        '-> '+prefix+'love <@user> | Muestra el amor que tienes entre dos personas .\n'+
                        '-> '+prefix+'saosin.\n'+
                        '-> '+prefix+'karla.\n'+
                        '-> '+prefix+'juanjo.\n'+
                        '**RacconBot - Bot Oficial del servidor**\n'+
                       '**Cualquier problema o duda con los comandos manda DM a Juanjomcw o etiquetarlo en el canal #general.**\n');
- }else
-     client.on("message", (message) => {
- if (message.content.startsWith("ban")){
-   message.channel.send("<:alm:336584266307731459> <:ban:369005376361725952>");
-
-   }else 
+ }else 
    if(message.content.startsWith(prefix + 'user')){
        let userm = message.mentions.users.first()
        if(!userm){
@@ -140,7 +143,7 @@ client.on("message", (message) => {
       message.channel.send("JUANJO PATRÓN, AMO Y SEÑOR DE TODOS :bow: ");
        
     }else 
-   if(message.content.startsWith(prefix + '8ball')){
+   if(message.content.startsWith(prefix + 'caracola')){
 
        var rpts = ["Sí", "No", "Tal vez", "No sé", "Definitivamente NO", " ¡Claro! "," Sí "," No "," Por supuesto! "," Por supuesto que no ", "Definitivamente NO"];
        if (!arguments) return message.reply(`Escriba una pregunta.`);
@@ -168,7 +171,7 @@ client.on("message", (message) => {
       const embed = new Discord.RichEmbed()
           .setAuthor('El porcentaje de amor de '+users+' es:')
           .setDescription(heard+' **'+random+' %**'+' '+heard)
-          .setColor(0xff4d4d)
+          .setColor(10371071)
 
         message.channel.send({embed});
        
@@ -201,5 +204,5 @@ client.on("message", (message) => {
         var canal = client.channels.get('404155431917715456');
         canal.send((`${member.user}, bienvenido al servidor pasala bien ahora eres un mapachito <:hype:331406040434212865>.`));
     })
-}); 
+});
 client.login(process.env.TOKEN);
