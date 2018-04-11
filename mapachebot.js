@@ -3,11 +3,17 @@ const  client = new Discord.Client();
 
 client.on("ready", () => {
     console.log("Estoy listo!");
-    
  
- });
+   client.user.setPresence( {
+       status: "STREAMING",
+       game: {
+           name: "!help | Raccoon★Army ▹",
+           url: "https://www.twitch.tv/Karla_Green",
+           type: "STREAMING"
+       }
+   } );
 
- client.on("guildMemberAdd", (member) => 
+    client.on("guildMemberAdd", (member) => 
  {
      messageToSend = "Bienvenido " + member.user + " a la Raccoon★Army ▹!  disfruta tu estancia en la comunidad <:karly:331439541892284417> revisa nuestras reglas en <#262072325019664385> <:RaccAttack:268179348828323841> !";
      client.channels.get('404155431917715456').sendMessage(messageToSend);
@@ -18,16 +24,7 @@ client.on("ready", () => {
      messageToSend = member.user.username + " abusó de la arena de gatos. Adios popó <:feelsyoshiman:336584928160514051>.";
      client.channels.get('404155431917715456').sendMessage(messageToSend);
  });
-   
-   client.user.setPresence( {
-       status: "STREAMING",
-       game: {
-           name: "!help | Raccoon★Army ▹",
-           url: "https://www.twitch.tv/Karla_Green",
-           type: "STREAMING"
-       }
-   } );
-
+    
 });
 let prefix = process.env.PREFIX;
 
