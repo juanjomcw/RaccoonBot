@@ -9,7 +9,7 @@ client.on("ready", () => {
 
  client.on("guildMemberAdd", (member) => 
  {
-     messageToSend = "Bienvenido " + member.user + " a la Raccoon★Army ▹!  disfruta tu estancia en la comunidad <:karly:331439541892284417> revisa nuestras reglas en <#262072325019664385> <:RaccAttack:268179348828323841> !";
+     messageToSend = "Bienvenido " + member.user + " a la Raccoon★Army ▹!  disfruta tu estadia <:karly:331439541892284417> revisa nuestras reglas en <#262072325019664385> <:RaccAttack:268179348828323841> !";
      client.channels.get('433510888188805132').sendMessage(messageToSend);
  });
  
