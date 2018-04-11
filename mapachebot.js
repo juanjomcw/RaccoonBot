@@ -196,6 +196,5 @@ client.on("message", (message) => {
         var canal = client.channels.get('404155431917715456');
         canal.send((`${member.user}, bienvenido al servidor pasala bien ahora eres un mapachito <:hype:331406040434212865>.`));
     })
-    client.user.setGame(prefix+'help | Raccoon★Army ▹');
 }); 
 client.login(process.env.TOKEN);
