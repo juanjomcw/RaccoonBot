@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const  client = new Discord.Client();
-//ready y welcome
+
 client.on("ready", () => {
     console.log("Estoy listo!");
     
@@ -18,8 +18,6 @@ client.on("ready", () => {
      messageToSend = member.user.username + " abusó de la arena de gatos. Adios popó <:feelsyoshiman:336584928160514051>.";
      client.channels.get('404155431917715456').sendMessage(messageToSend);
  });
-
- //aqui son comandos
 let prefix = process.env.PREFIX;
 
 client.on("message", (message) => {
