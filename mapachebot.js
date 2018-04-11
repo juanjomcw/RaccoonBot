@@ -3,7 +3,6 @@ const  client = new Discord.Client();
 
 client.on("ready", () => {
     console.log("Estoy listo!");
-    client.user.setGame(prefix+'help | Raccoon★Army ▹');
  
  });
 
