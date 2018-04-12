@@ -2,16 +2,11 @@ const Discord = require("discord.js");
 const  client = new Discord.Client();
 
 client.on("ready", () => {
-    console.log("Estoy listo!");
-    client.user.setPresence( {
-       status: "online",
-       game: {
-           name: "!help | Raccoon★Army ",
-           url: "https://www.twitch.tv/karla_green",
-           type: "STREAMING"
-       }
-   } );
- });
+   console.log("Estoy listo!");
+   
+   client.user.setGame(prefix+'help | Raccoon★Army ▹');
+
+});
 
  client.on("guildMemberAdd", (member) => 
  {
