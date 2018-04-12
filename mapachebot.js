@@ -193,11 +193,6 @@ client.on("message", (message) => {
       if (!Canalvoz) {
         message.channel.send('No estoy en un canal de voz.');
         }
-    }else 
-    client.on("guildMemberAdd", (member) => {
-        console.log(`Nuevo Usuario: ${member.user.username} se ha unido a ${member.guild.name}.`);
-        var canal = client.channels.get('404155431917715456');
-        canal.send((`${member.user}, bienvenido al servidor pasala bien ahora eres un mapachito <:hype:331406040434212865>.`));
-    })
+    }
 });
 client.login(process.env.TOKEN);
