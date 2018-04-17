@@ -33,12 +33,6 @@ client.on("ready", () => {
     }
  });
 
-    client.on("message", (message) => {
- if (message.content.startsWith("Hola")){
-   message.channel.send("Hola cabeza de bola! <:dogoderp:420253479370752011>");
-    }
- });
-
  //comandos con prefix
 
  let prefix = process.env.PREFIX;
