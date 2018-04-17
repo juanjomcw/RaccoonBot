@@ -21,18 +21,30 @@ client.on("ready", () => {
  });
 //comandos sin prefix
 
-     client.on("message", (message) => {
+     client.on("message", (message) => {        
  if (message.content.startsWith("ban")){
    message.channel.send("<:alm:336584266307731459> <:ban:369005376361725952>");
     }
  });
 
     client.on("message", (message) => {
+          if (!message.content.startsWith(message)) return;
+          if (message.author.bot) return;
+       
  if (message.content.startsWith("hola")){
    message.channel.send("Hola cabeza de bola! <:dogoderp:420253479370752011>");
     }
  });
 
+    client.on("message", (message) => {
+          if (!message.content.startsWith(message)) return;
+          if (message.author.bot) return;
+       
+ if (message.content.startsWith("Hola")){
+   message.channel.send("Hola cabeza de bola! <:dogoderp:420253479370752011>");
+    }
+ });
+        
  //comandos con prefix
 
  let prefix = process.env.PREFIX;
