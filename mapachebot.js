@@ -146,7 +146,7 @@ client.on("message", (message) => {
       message.channel.send({ embed });
     }else
     if (message.content.startsWith(prefix + "saosin")){
-      message.channel.send('AAAAHHHHH PRRO TRAIS EL OCNTRIS', {files:'https://cdn.discordapp.com/attachments/260272124311109652/425551272658206720/75f47707dcfc5806a662eb39ebd2bffa.png'});
+      message.channel.send({"AAAAHHHHH PRRO TRAIS EL OCNTRIS", file:"https://i.imgur.com/V58cDNV.png"});
        
     }else
     if (message.content.startsWith(prefix + "karla")){
