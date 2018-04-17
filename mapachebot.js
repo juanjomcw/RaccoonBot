@@ -146,7 +146,7 @@ client.on("message", (message) => {
       message.channel.send({ embed });
     }else
     if (message.content.startsWith(prefix + "saosin")){
-      message.channel.send({"AAAAHHHHH PRRO TRAIS EL OCNTRIS", file:"https://i.imgur.com/V58cDNV.png"});
+      message.channel.send("AAAAHHHHH PRRO TRAIS EL OCNTRIS", {file:"https://i.imgur.com/V58cDNV.png"});
        
     }else
     if (message.content.startsWith(prefix + "karla")){
