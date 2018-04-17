@@ -150,7 +150,7 @@ client.on("message", (message) => {
        
     }else
     if (message.content.startsWith(prefix + "karla")){
-      message.channel.send("La mejor de todas <:karlagLove:433626197168226355>");
+      message.channel.send("La mejor de todas <:karlagLove:433626197168226355>", {file:"https://cdn.discordapp.com/attachments/260272124311109652/382233854640914447/avatar.png"});
        
     }else
     if (message.content.startsWith(prefix + "juanjo")){
