@@ -96,6 +96,7 @@ client.on("message", (message) => {
                        '-> '+prefix+'user <@user> | Muestra informacion de un usuario.\n'+
                        '-> '+prefix+'server <@user> | Muestra informacion del.\n'+
                        '-> '+prefix+'love <@user> | Muestra el amor que tienes entre dos personas .\n'+
+                       '-> '++'ban | ban .\n'+
                        '-> '+prefix+'saosin.\n'+
                        '-> '+prefix+'karla.\n'+
                        '-> '+prefix+'juanjo.\n'+
