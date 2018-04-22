@@ -157,6 +157,14 @@ client.on("message", (message) => {
       message.channel.send("JUANJO PATRÓN, AMO Y SEÑOR DE TODOS :bow: ");
        
     }else 
+   if(message.content.startsWith(prefix + 'shoutout')){
+       message.channel.send('**SUBS!** Compartan su stream pero __por favor revisen estas **reglas**__ :\n'+
+                        '**1.** Pon tu link **__1 sola vez__** para mantener el orden.\n'+
+                        '**2.** Incluye una pequeña descripción sobre ti, tu contenido, tu horario o hobbies, etc. <:owo:433633440118865920>\n'+
+                        '**3.** Sólo puedes promocionar **__tu propio canal__**.\n'+
+                        '**4.** Este canal esta reservado para estos posts solamente, **__evita chatear aquí__** para que los links no se pierdan.\n'+
+                        'Como saben es considerado mala "etiqueta" hacerse self-promotion en otros canales, así que abro este espacio para que por aquí podamos compartir los canales de la gente talentosa que hay en nuestra comunidad de una manera amable y saludable. :heart:\n');
+    }else 
    if(message.content.startsWith(prefix + 'caracola')){
 
        var rpts = ["Sí", "No", "Tal vez", "No sé", "Definitivamente NO", " ¡Claro! "," Sí "," No "," Por supuesto! "," Por supuesto que no ", "Definitivamente NO"];
