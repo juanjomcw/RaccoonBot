@@ -158,7 +158,7 @@ client.on("message", (message) => {
        
     }else 
    if(message.content.startsWith(prefix + 'shoutout')){
-       message.channel.send('** <@437687261224501248> !** Compartan su stream en <#437497596286599173> pero __por favor revisen estas **reglas**__ :\n'+
+       message.channel.send('** <@437691718003982336> !** Compartan su stream en <#437497596286599173> pero __por favor revisen estas **reglas**__ :\n'+
                             '**1.** Pon tu link **__1 sola vez__** para mantener el orden.\n'+
                             '**2.** Incluye una pequeña descripción sobre ti, tu contenido, tu horario o hobbies, etc. <:owo:433633440118865920>\n'+
                             '**3.** Sólo puedes promocionar **__tu propio canal__**.\n'+
