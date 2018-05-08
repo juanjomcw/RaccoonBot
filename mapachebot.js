@@ -57,11 +57,17 @@ client.on("message", (message) => {
    message.channel.send("Mira el canal de <#415978105883066369> para vincular la cuenta y disfrutar de tus beneficios");
  } else
  if (message.content.startsWith(prefix + "rabbit")){
-   message.channel.send({embed: {
-       color: 16744448,   
-       description: "Unete a nuestro grupo de Rabbit para ver peliculas con los mapachitos, recuerda primero crear una cuenta en caso de no tener una https://www.rabb.it/groups/raccoonarmy <:wae:404790335609241600>"
-       }});
- } else
+   message.channel.send('https://www.rabb.it/karla_green');
+ }else
+ if (message.content.startsWith(prefix + "twitter")){
+   message.channel.send('https://twitter.com/lavertfille');
+ }else
+ if (message.content.startsWith(prefix + "insta")){
+   message.channel.send('https://www.instagram.com/lavertfille/');
+ }else
+ if (message.content.startsWith(prefix + "twitch")){
+   message.channel.send('https://www.twitch.tv/karla_green');
+ }else
  if(message.content.startsWith(prefix + 'avatar')){
    let img = message.mentions.users.first()
    if (!img) {
@@ -90,18 +96,22 @@ client.on("message", (message) => {
    message.channel.send('**'+message.author.username+'**, Revisa tus mensajes privados.');
    message.author.send('**Comandos de RaccoonBot**\n'+
                        '-> '+prefix+'avatar <@user> | Muestra el avatar de un usuario.\n'+
-                       '-> '+prefix+'rabbit | Muestra nuestro grupo de Rabbit.\n'+
+                       '-> '+prefix+'rabbit | Muestra canal de Rabbit donde vemos peliculas, series, y mas.\n'+
                        '-> '+prefix+'subs <@user> | Muestra informacion para subs.\n'+
-                       '-> '+prefix+'caracola <@user> | El bot respondera a tus preguntas.\n'+
+                       '-> '+prefix+'caracola <@user> | El bot respondera a tus preguntas dd(mejor conocido como 8ball).\n'+
                        '-> '+prefix+'user <@user> | Muestra informacion de un usuario.\n'+
                        '-> '+prefix+'server <@user> | Muestra informacion del.\n'+
                        '-> '+prefix+'love <@user> | Muestra el amor que tienes entre dos personas .\n'+
+                       '-> '+prefix+'insta | Instagram de Karla_Green.\n'+
+                       '-> '+prefix+'twitter | twitter de Karla_Green.\n'+
+                       '-> '+prefix+'twitch | Twitch de Karla_Green.\n'+
                        '-> '+prefix+'saosin.\n'+
                        '-> '+prefix+'karla.\n'+
                        '-> '+prefix+'juanjo.\n'+
+                      
                        
                        '**RacconBot - Bot Oficial del servidor**\n'+
-                      '**Cualquier problema o duda con los comandos manda DM a Juanjomcw o etiquetarlo en el canal #general.**\n');
+                      '**Cualquier problema o duda con los comandos manda DM a Juanjomcw#5461 o etiquetarlo en el canal #general.**\n');
  }else 
    if(message.content.startsWith(prefix + 'user')){
        let userm = message.mentions.users.first()
