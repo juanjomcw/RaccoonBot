@@ -26,14 +26,24 @@ client.on("ready", () => {
    message.channel.send("<:alm:336584266307731459> <:ban:369005376361725952>");
     }
  });
-
+let cooldown= new Set();
     client.on("message", (message) => {
           if (!message.content.startsWith(message)) return;
           if (message.author.bot) return;
        
  if (message.content.startsWith("hola")){
-   message.channel.send("Hola cabeza de bola! <:dogoderp:420253479370752011>");
-    }
+   if(cooldown.has(message.author.id)){
+   message.channel.send(message.author.username+ " utilice el comando despues de 10 segundos!");
+   return;
+}else{
+    message.channel.send("Hola cabeza de bola! <:dogoderp:420253479370752011>");
+    return;
+ }
+cooldown.add(message.author.id);
+setTimeout(() => {
+  cooldown.delete(message.author.id);
+}, 10000);
+ }
  });
 
     client.on("message", (message) => {
