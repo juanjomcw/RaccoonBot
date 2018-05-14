@@ -44,13 +44,21 @@ setTimeout(() => {
  }
  });
 
-    client.on("message", (message) => {
+   client.on("message", (message) => {
           if (!message.content.startsWith(message)) return;
           if (message.author.bot) return;
        
  if (message.content.startsWith("Hola")){
-   message.channel.send("Hola cabeza de bola! <:dogoderp:420253479370752011>");
-    }
+   if(cooldown.has(message.author.id)){
+   return;
+}else{
+    message.channel.send("Hola cabeza de bola! <:dogoderp:420253479370752011>");
+ }
+cooldown.add(message.author.id);
+setTimeout(() => {
+  cooldown.delete(message.author.id);
+}, 10000);
+ }
  });
         
  //comandos con prefix
