@@ -33,7 +33,6 @@ let cooldown= new Set();
        
  if (message.content.startsWith("hola")){
    if(cooldown.has(message.author.id)){
-   message.channel.send(message.author.username+ " utilice el comando despues de 10 segundos!");
    return;
 }else{
     message.channel.send("Hola cabeza de bola! <:dogoderp:420253479370752011>");
