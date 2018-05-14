@@ -20,7 +20,7 @@ client.on("ready", () => {
      client.channels.get('433510888188805132').sendMessage(messageToSend);
  });
 //comandos sin prefix
-let cooldown= new Set(10);
+let cooldown= new Set();
 
      client.on("message", (message) => {        
  if (message.content.startsWith("ban")){
