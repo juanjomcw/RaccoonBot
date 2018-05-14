@@ -37,7 +37,6 @@ let cooldown= new Set();
    return;
 }else{
     message.channel.send("Hola cabeza de bola! <:dogoderp:420253479370752011>");
-    return;
  }
 cooldown.add(message.author.id);
 setTimeout(() => {
