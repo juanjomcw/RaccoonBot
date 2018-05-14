@@ -113,8 +113,8 @@ client.on("message", (message) => {
    message.author.send('**Comandos de RaccoonBot**\n'+
                        '-> '+prefix+'avatar <@user> | Muestra el avatar de un usuario.\n'+
                        '-> '+prefix+'rabbit | Muestra canal de Rabbit donde vemos peliculas, series, y mas.\n'+
-                       '-> '+prefix+'subs <@user> | Muestra informacion para subs.\n'+
-                       '-> '+prefix+'caracola <@user> | El bot respondera a tus preguntas dd(mejor conocido como 8ball).\n'+
+                       '-> '+prefix+'subs | Muestra informacion para subs.\n'+
+                       '-> '+prefix+'caracola <pregunta> | El bot respondera a tus preguntas dd(mejor conocido como 8ball).\n'+
                        '-> '+prefix+'user <@user> | Muestra informacion de un usuario.\n'+
                        '-> '+prefix+'server <@user> | Muestra informacion del.\n'+
                        '-> '+prefix+'love <@user> | Muestra el amor que tienes entre dos personas .\n'+
