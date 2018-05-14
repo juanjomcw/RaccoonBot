@@ -116,8 +116,8 @@ client.on("message", (message) => {
                        '-> '+prefix+'subs | Muestra informacion para subs.\n'+
                        '-> '+prefix+'caracola <pregunta> | El bot respondera a tus preguntas dd(mejor conocido como 8ball).\n'+
                        '-> '+prefix+'user <@user> | Muestra informacion de un usuario.\n'+
-                       '-> '+prefix+'server <@user> | Muestra informacion del.\n'+
-                       '-> '+prefix+'love <@user> | Muestra el amor que tienes entre dos personas .\n'+
+                       '-> '+prefix+'server  | Muestra informacion del.\n'+
+                       '-> '+prefix+'love <@user> y <@user> | Muestra el amor que tienes entre dos personas .\n'+
                        '-> '+prefix+'insta | Instagram de Karla_Green.\n'+
                        '-> '+prefix+'twitter | twitter de Karla_Green.\n'+
                        '-> '+prefix+'twitch | Twitch de Karla_Green.\n'+
