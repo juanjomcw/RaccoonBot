@@ -20,6 +20,7 @@ client.on("ready", () => {
      client.channels.get('433510888188805132').sendMessage(messageToSend);
  });
 //comandos sin prefix
+let cooldown= new Set();
 
      client.on("message", (message) => {        
  if (message.content.startsWith("ban")){
@@ -33,7 +34,19 @@ client.on("ready", () => {
        
  if (message.content.startsWith("hola")){
    message.channel.send("Hola cabeza de bola! <:dogoderp:420253479370752011>");
-    }
+   if(cooldown.has(message.author.id)){
+   message.channel.send(message.author.username+ " utilice el comando despues de 10 segundos!");
+   return;
+}
+//Si no se encuentra dentro del enfriamiento, agrega al usuario para que
+//no pueda utilizar el comando durante 10 segundos.
+cooldown.add(message.author.id);
+
+//Quita al usuario del enfriamiento después de pasar los 10 segundos.
+setTimeout(() => {
+  cooldown.delete(message.author.id);
+}, 10000);
+ }
  });
 
     client.on("message", (message) => {
@@ -42,7 +55,19 @@ client.on("ready", () => {
        
  if (message.content.startsWith("Hola")){
    message.channel.send("Hola cabeza de bola! <:dogoderp:420253479370752011>");
-    }
+    if(cooldown.has(message.author.id)){
+   message.channel.send(message.author.username+ " utilice el comando despues de 10 segundos!");
+   return;
+}
+//Si no se encuentra dentro del enfriamiento, agrega al usuario para que
+//no pueda utilizar el comando durante 10 segundos.
+cooldown.add(message.author.id);
+
+//Quita al usuario del enfriamiento después de pasar los 10 segundos.
+setTimeout(() => {
+  cooldown.delete(message.author.id);
+}, 10000);
+ }
  });
         
  //comandos con prefix
