@@ -79,7 +79,7 @@ client.on("message", (message) => {
    message.channel.send('https://twitter.com/lavertfille');
  }else
   if (message.content.startsWith(prefix + 'del')) {
-  if (!message.member.roles.find("name", "Fortnite")) return message.reply('Nel papu.');{
+  if (!message.member.roles.find("name", "Bots")) return message.reply('Nel papu :V.');{
     const user = message.mentions.users.first();
     const amount = !!parseInt(message.content.split(' ')[1]) ? parseInt(message.content.split(' ')[1]) : parseInt(message.content.split(' ')[2])
     if (!amount) return message.reply('Especifica la cantidad de mensajes que deseas borrar');
@@ -93,7 +93,7 @@ client.on("message", (message) => {
         }
         message.channel.bulkDelete(messages).catch(error => console.log(error.stack));
 //Puede eliminar el message.channel.send que se encuentra abajo si lo desea, es opcional.
-        message.channel.send("¡Los mensajes han sido purgados correctamente!");
+        message.channel.send("¡Adios popo :poop: !");
     });
 }}else
  if (message.content.startsWith(prefix + "insta")){
@@ -132,7 +132,7 @@ client.on("message", (message) => {
                        '-> '+prefix+'avatar <@user> | Muestra el avatar de un usuario.\n'+
                        '-> '+prefix+'rabbit | Muestra canal de Rabbit donde vemos peliculas, series, y mas.\n'+
                        '-> '+prefix+'subs | Muestra informacion para subs.\n'+
-                       '-> '+prefix+'caracola <pregunta> | El bot respondera a tus preguntas dd(mejor conocido como 8ball).\n'+
+                       '-> '+prefix+'caracola <pregunta> | El bot respondera a tus preguntas (8ball).\n'+
                        '-> '+prefix+'user <@user> | Muestra informacion de un usuario.\n'+
                        '-> '+prefix+'server  | Muestra informacion del.\n'+
                        '-> '+prefix+'love <@user> y <@user> | Muestra el amor que tienes entre dos personas .\n'+
@@ -142,6 +142,7 @@ client.on("message", (message) => {
                        '-> '+prefix+'saosin.\n'+
                        '-> '+prefix+'karla.\n'+
                        '-> '+prefix+'juanjo.\n'+
+                       '-> '+prefix+'del <cantidad> | borra los mensajes (SOLO MODERADORES).\n'+
                       
                        
                        '**RacconBot - Bot Oficial del servidor**\n'+
