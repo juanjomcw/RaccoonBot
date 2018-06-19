@@ -78,6 +78,23 @@ client.on("message", (message) => {
  if (message.content.startsWith(prefix + "twitter")){
    message.channel.send('https://twitter.com/lavertfille');
  }else
+  if (message.content.startsWith(prefix + 'del')) {
+    const user = message.mentions.users.first();
+    const amount = !!parseInt(message.content.split(' ')[1]) ? parseInt(message.content.split(' ')[1]) : parseInt(message.content.split(' ')[2])
+    if (!amount) return message.reply('Especifica la cantidad de mensajes que deseas borrar');
+    if (!amount && !user) return message.reply('Especifica un usuario y cantidad de mensajes');
+    message.channel.fetchMessages({
+        limit: amount,
+    }).then((messages) => {
+        if (user) {
+            const filterBy = user ? user.id : Client.user.id;
+            messages = messages.filter(m => m.author.id === filterBy).arary().slice(0, amount);
+        }
+        message.channel.bulkDelete(messages).catch(error => console.log(error.stack));
+//Puede eliminar el message.channel.send que se encuentra abajo si lo desea, es opcional.
+        message.channel.send("¡Los mensajes han sido purgados correctamente!");
+    });
+}else
  if (message.content.startsWith(prefix + "insta")){
    message.channel.send('https://www.instagram.com/lavertfille/');
  }else
