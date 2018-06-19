@@ -79,6 +79,7 @@ client.on("message", (message) => {
    message.channel.send('https://twitter.com/lavertfille');
  }else
   if (message.content.startsWith(prefix + 'del')) {
+  if (!message.member.roles.find("name", "Fortnite")) return message.reply('Nel papu.');{
     const user = message.mentions.users.first();
     const amount = !!parseInt(message.content.split(' ')[1]) ? parseInt(message.content.split(' ')[1]) : parseInt(message.content.split(' ')[2])
     if (!amount) return message.reply('Especifica la cantidad de mensajes que deseas borrar');
@@ -94,7 +95,7 @@ client.on("message", (message) => {
 //Puede eliminar el message.channel.send que se encuentra abajo si lo desea, es opcional.
         message.channel.send("¡Los mensajes han sido purgados correctamente!");
     });
-}else
+}}else
  if (message.content.startsWith(prefix + "insta")){
    message.channel.send('https://www.instagram.com/lavertfille/');
  }else
