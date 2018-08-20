@@ -104,8 +104,8 @@ client.on("message", (message) => {
       color: 16716947,
       description:  '**:alarm_clock: HORARIO FOR THIS WEEK!**.\n'+
                     '-------------------------------------------------------\n'+
-                    'MARTES → GOD OF WAR 10PM [Pacific Time].\n'+
-                    'Jueves → Fortnite 8PM [Pacific Time].\n'+
+                    'MARTES → GOD OF WAR 10PM [PACIFIC TIME].\n'+
+                    'JUEVES → FORTNITE 8PM [PACIFIC TIME].\n'+
                     'https://www.twitch.tv/karla_green\n'+
                     '-------------------------------------------------------\n'
                                                           
