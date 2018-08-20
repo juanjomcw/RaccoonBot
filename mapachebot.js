@@ -99,6 +99,18 @@ client.on("message", (message) => {
  if (message.content.startsWith(prefix + "insta")){
    message.channel.send('https://www.instagram.com/lavertfille/');
  }else
+    if (message.content.startsWith(prefix +"horario")){
+    message.channel.send({embed: {
+      color: 16716947,
+      description:  '**:alarm_clock: HORARIO FOR THIS WEEK!**.\n'+
+                    '-------------------------------------------------------\n'+
+                    'MARTES → GOD OF WAR 10PM [Pacific Time].\n'+
+                    'Jueves → Fortnite 8PM [Pacific Time].\n'+
+                    'https://www.twitch.tv/karla_green\n'+
+                    '-------------------------------------------------------\n'
+                                                          
+    }});
+}else
  if (message.content.startsWith(prefix + "twitch")){
    message.channel.send('https://www.twitch.tv/karla_green');
  }else
