@@ -74,9 +74,6 @@ client.on("message", (message) => {
  } else
  if (message.content.startsWith(prefix + "rabbit")){
    message.channel.send('https://www.rabb.it/karla_green');
- } else
- if (message.content.startsWith(prefix + "video")){
-   message.channel.send('@everyone hehexd');
  }else
  if (message.content.startsWith(prefix + "twitter")){
    message.channel.send('https://twitter.com/lavertfille');
